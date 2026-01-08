@@ -251,7 +251,7 @@ import type {
 
 ## Links
 
-- **GitHub**: [View on GitHub]()
+- **GitHub**: [View on GitHub](https://github.com/kashishgadhiya/maplibre-gl-multiple-color-draw)
 - **NPM Package**: [View on NPM](https://www.npmjs.com/package/maplibre-gl-multiple-color-draw)
 
 ## Browser Support
