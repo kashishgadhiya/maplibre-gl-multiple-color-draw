@@ -1,0 +1,55 @@
+{
+  "name": "maplibre-gl-multiple-color-draw",
+  "version": "1.0.1",
+  "description": "A minimal, production-ready drawing library for MapLibre GL JS with line, dashed line, freehand, polygon, and select modes with multiple color support",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "maplibre",
+    "maplibre-gl",
+    "drawing",
+    "geojson",
+    "map",
+    "interactive"
+  ],
+  "author": "kashishgadhiya",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashishgadhiya/maplibre-gl-multiple-color-draw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kashishgadhiya/maplibre-gl-multiple-color-draw/issues"
+  },
+  "homepage": "https://github.com/kashishgadhiya/maplibre-gl-multiple-color-draw#readme",
+  "peerDependencies": {
+    "maplibre-gl": "^3.0.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.13",
+    "@types/react": "^18.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "@vitest/ui": "^1.0.0",
+    "happy-dom": "^12.0.0"
+  },
+  "dependencies": {}
+}
