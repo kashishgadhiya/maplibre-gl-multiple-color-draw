@@ -1,6 +1,6 @@
 {
   "name": "maplibre-gl-multiple-color-draw",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A minimal, production-ready drawing library for MapLibre GL JS with line, dashed line, freehand, polygon, and select modes with multiple color support",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
