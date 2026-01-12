@@ -27,9 +27,9 @@ npm install maplibre-gl
 
 ## Live Demo
 
-[![Live Demo](./demo-screenshot.png)](https://maplibre-gl-multiple-color-draw-demo-jbokane4f.vercel.app/)
+[![Live Demo](./demo-screenshot.png)](https://maplibre-gl-multiple-color-draw-dem.vercel.app/)
 
-[View Live Demo →](https://maplibre-gl-multiple-color-draw-demo-jbokane4f.vercel.app/)
+[View Live Demo →](https://maplibre-gl-multiple-color-draw-dem.vercel.app/)
 
 ## Quick Start
 
