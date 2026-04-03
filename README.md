@@ -16,7 +16,7 @@
 ## ✨ Features
 
 - 🖍️ **6 Interactive Drawing Modes**: Seamlessly switch between Line, Dashed Line, Freehand, Freehand Dashed, Polygon, and Select/Move modes.
-- 🎨 **Dynamic Styling**: Instantly change colors and line thickness at runtime without needing to re-draw.
+- 🎨 **Multiple Colors & Dynamic Styling**: Draw lines and shapes with independent, custom colors! Instantly change colors and line thickness at runtime without needing to re-draw.
 - 📐 **Standard GeoJSON Support**: All drawn shapes are natively stored as clean, standard `GeoJSON FeatureCollections` ready for database storage or API submission.
 - ⚛️ **React Ready**: Includes a highly optimized, optional `useMapDraw` hook for React architectures.
 - 🪶 **Ultra Lightweight**: Zero runtime dependencies! Only `maplibre-gl` is required as a peer.

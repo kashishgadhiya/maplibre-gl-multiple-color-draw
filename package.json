@@ -28,7 +28,14 @@
     "drawing",
     "geojson",
     "map",
-    "interactive"
+    "interactive",
+    "polygon",
+    "freehand",
+    "react",
+    "hook",
+    "typescript",
+    "multiple-colors",
+    "multi-color"
   ],
   "author": "kashishgadhiya",
   "license": "MIT",
