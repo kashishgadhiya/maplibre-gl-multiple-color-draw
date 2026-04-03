@@ -1,17 +1,27 @@
-# maplibre-gl-multiple-color-draw
+<div align="center">
+  <h1>🎨 maplibre-gl-multiple-color-draw</h1>
+  <p><b>A production-ready, highly customizable drawing library for MapLibre GL JS.</b></p>
+  
+  [![NPM Version](https://img.shields.io/npm/v/maplibre-gl-multiple-color-draw?style=flat-square&color=3388ff)](https://www.npmjs.com/package/maplibre-gl-multiple-color-draw)
+  [![License](https://img.shields.io/npm/l/maplibre-gl-multiple-color-draw?style=flat-square)](https://github.com/kashishgadhiya/maplibre-gl-multiple-color-draw)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+  [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success?style=flat-square)](#)
+  <br/>
+  
+  <p>Draw smooth lines, complex polygons, and freehand shapes directly on your maps with dynamic multi-color support and real-time styling updates.</p>
+</div>
 
-A production-ready drawing library for MapLibre GL JS. Draw lines, polygons, and freehand shapes on maps with multiple colors, dynamic styling, and full GeoJSON support.
+---
 
-## Features
+## ✨ Features
 
-- **6 Drawing Modes**: Line, Dashed Line, Freehand, Freehand Dashed, Polygon, and Select/Move
-- **Simple API**: Clean, intuitive interface with TypeScript support
-- **GeoJSON Export**: All features stored as standard GeoJSON
-- **Dynamic Styling**: Change color and thickness at runtime
-- **React Hook**: Built-in useMapDraw hook for React applications
-- **Lightweight**: Zero dependencies (only peer dependency: maplibre-gl)
-- **Type Safe**: Full TypeScript definitions included
-- **Framework Agnostic**: Works with any JavaScript framework
+- 🖍️ **6 Interactive Drawing Modes**: Seamlessly switch between Line, Dashed Line, Freehand, Freehand Dashed, Polygon, and Select/Move modes.
+- 🎨 **Dynamic Styling**: Instantly change colors and line thickness at runtime without needing to re-draw.
+- 📐 **Standard GeoJSON Support**: All drawn shapes are natively stored as clean, standard `GeoJSON FeatureCollections` ready for database storage or API submission.
+- ⚛️ **React Ready**: Includes a highly optimized, optional `useMapDraw` hook for React architectures.
+- 🪶 **Ultra Lightweight**: Zero runtime dependencies! Only `maplibre-gl` is required as a peer.
+- 🛡️ **Type-Safe Interface**: Ships with full, comprehensive TypeScript definitions out of the box.
+- 🌐 **Framework Agnostic**: The core library is purely Javascript. Works flawlessly with any modern framework (Vue, Svelte, Angular, React, etc.) or plain Vanilla JS.
 
 ## Installation
 
@@ -33,7 +43,47 @@ npm install maplibre-gl
 
 ## Quick Start
 
-### React + TypeScript Example
+<details>
+<summary><strong>Vanilla JavaScript Example</strong></summary>
+<br>
+
+The core library is entirely framework-agnostic. You can use it with plain JavaScript and any MapLibre map with zero extra dependencies:
+
+```javascript
+import maplibregl from 'maplibre-gl';
+import { MapDraw } from 'maplibre-gl-multiple-color-draw';
+import 'maplibre-gl/dist/maplibre-gl.css';
+
+// 1. Initialize your map
+const map = new maplibregl.Map({
+    container: 'map',
+    style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
+    center: [0, 0],
+    zoom: 2
+});
+
+// 2. Initialize MapDraw once the map is loaded
+map.on('load', () => {
+    const draw = new MapDraw(map, {
+        color: '#ff0000',
+        thickness: 3
+    });
+    
+    // Enable drawing
+    draw.enable();
+    
+    // Set drawing mode
+    draw.setMode('polygon');
+    
+    // Later, you can get the GeoJSON data:
+    // const geojson = draw.getGeoJSON();
+});
+```
+</details>
+
+<details>
+<summary><strong>React + TypeScript Example</strong></summary>
+<br>
 
 Here's a complete example that demonstrates all features. The styling uses Tailwind CSS classes, but you can replace them with inline styles or any CSS framework:
 
@@ -150,6 +200,7 @@ function App() {
 
 export default App;
 ```
+</details>
 
 ## API Reference
 
@@ -258,7 +309,7 @@ import type {
 
 Works with all modern browsers that support:
 - ES6+ JavaScript
-- MapLibre GL JS (^3.0.0 or ^4.0.0)
+- MapLibre GL JS (^3.0.0, ^4.0.0, or ^5.0.0)
 
 ## License
 
